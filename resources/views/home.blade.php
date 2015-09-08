@@ -18,15 +18,14 @@
 <body>
     <div id="search" class="container">
         <!--   <nav class="navbar navbar-inverse navbar-embossed text-center" role="navigation"></nav> -->
-
         <section class="">
             <div class="jumbotron">
                 <h1>Bugsy <small class="grey">Personal Bug Database</small></h1>
                 <div class="form-group">
-                    <input type="text" v-model="bug" class="form-control flat input-lg" name="search" placeholder="PHP DateTime bug">
+                    <input type="text" v-on="keypress: doSearch enter " v-model="bug" class="form-control flat input-lg" name="search" placeholder="PHP DateTime bug">
                     <span class="input-icon fui-search animated tada"></span>
                 </div>
-                <a href="#" v-on="click: doSearch()" class="btn btn-success btn-embossed btn-lg"><i class="fui-plus "></i> Agregar bug</a>
+                <a href="#" class="btn btn-success btn-embossed btn-lg"><i class="fui-plus "></i> Agregar bug</a>
             </div>
             <div class="row-fluid">
                 <div class="col-sm-offset-3 col-sm-6 well well-sm">
